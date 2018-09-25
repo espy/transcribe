@@ -193,3 +193,7 @@ window.addEventListener('resize', _.debounce(function () {
 
 // wavesurfer.load('inter.m4a')
 // document.getElementsByTagName('body')[0].classList.add('file-loaded')
+
+window.onbeforeunload = function () {
+  return 'Please make sure you’ve saved your work before leaving this page'
+}
