@@ -1,0 +1,145 @@
+body {
+      font-family: Helvetica, sans-serif;
+      font-size: 18px;
+      color: #4e9dca;
+    }
+    #holder {
+      display: block;
+      position: fixed;
+      background: #ffc6bf;
+      border: 5px solid currentColor;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      line-height: 100vh;
+      color: #de341f;
+      font-weight: bold;
+      z-index: 1;
+    }
+    #holder.hover {
+      color: #4e9dca;
+      background-color: #6bbeed;
+    }
+    .file-loaded #holder {
+      display: none;
+    }
+    #audio-area {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 42vh;
+      background: #f7f5ec;
+      padding: 10px;
+    }
+    #remove-loop{
+      display: none;
+    }
+    .is-looping #remove-loop{
+      display: inline;
+    }
+    wave > wave {
+      border-color: #de341f !important;
+      position: relative;
+    }
+    wave > wave:before,
+    wave > wave:after {
+      content: "";
+      width: 2px;
+      height: 3px;
+      background: #de341f;
+      display: block;
+      position: absolute;
+      right: 0;
+    }
+    wave > wave:before{
+      top: 0;
+    }
+    wave > wave:after {
+      bottom: 0;
+    }
+    .wavesurfer-region{
+      background-color: rgba(222, 52, 31, 0.1) !important;
+      border-radius: 1px;
+      border: 1px solid #de341f;
+      box-sizing: border-box;
+    }
+    .wavesurfer-handle{
+      margin-left: -1px !important;
+      top: 5px !important;
+      width: 0 !important;
+      bottom: 5px !important;
+      height: auto !important;
+    }
+    .wavesurfer-handle:before{
+      content: "";
+      display: block;
+      width: 7px;
+      height: 7px;
+      background-color: #f5e1d7;
+      position: absolute;
+      top: calc(50% - 4px);
+      transform: rotateZ(45deg);
+      left: -4px;
+      border: 1px solid #de341f;
+    }
+    .wavesurfer-handle-end:before{
+      left: -3px;
+    }
+    #waveform-timeline {
+      margin: 1em 0 0;
+    }
+    #waveform-display{
+      position: relative;
+    }
+    #waveform-display > wave{
+      transform: scaleY(0);
+      transition: all 1s ease-in-out;
+    }
+    .waveform-ready #waveform-display > wave{
+      transform: scaleY(1);
+    }
+    #loading-message {
+      position: absolute;
+      top: calc(50% - 0.5em);
+      text-align: center;
+      width: 100%;
+    }
+    .waveform-ready #loading-message{
+      display: none;
+    }
+    #controls {
+      margin: 1em 0;
+    }
+    #text-area {
+      position: fixed;
+      top: 42vh;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #f7f5ec;
+      padding: 10px;
+    }
+    textarea {
+      width: 100%;
+      max-width: 70em;
+      height: 100%;
+      border: none;
+      background: #f7f5ec;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1.25rem;
+      padding: 1em;
+      line-height: 1.3;
+      border: 3px solid #e5e7e2;
+      color: #4e9dca;
+    }
+    textarea:focus{
+      outline: none;
+      border-color: #4e9dca;
+    }
+    .hidden{
+      display: none;
+    }

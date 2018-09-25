@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transcribe</title>
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+  <div id="holder">Drop an audio file here…</div>
+  <section id="audio-area">
+    <h1><span id="title">Transcribe</span><span id="time"></span></h1>
+    <div id="waveform-display">
+      <div id="loading-message">
+        Generating your waveform…
+      </div>
+    </div>
+    <div id="waveform-timeline"></div>
+    <div id="controls">
+      <button id="play-pause">Play</button>
+      <input id="playback-rate" type="range" min="0.5" max="2" step="0.1" value="1"/>
+      <button id="remove-loop">Remove loop</button>
+    </div>
+  </section>
+  <section id="text-area">
+    <textarea name="transcript" id="transcript" cols="30" rows="10">
+Welcome to transcribe.
+Press the escape key to play and pause.
+Click and drag on the waveform to keep repeating a section.
+Type your transcription in this area.
+Your work is always saved on this device.
+
+Happy transcribing!
+    </textarea>
+  </section>
+
+  <script src="js/wavesurfer.min.js"></script>
+  <script src="js/wavesurfer.timeline.min.js"></script>
+  <script src="js/wavesurfer.regions.min.js"></script>
+  <script src="js/lodash.min.js"></script>
+  <script src="/assets/main.js"></script>
+</body>
+</html>
