@@ -1,6 +1,6 @@
 # Transcribe ✍️
 
-A simple, no-nonsense [online tool](https://espy.github.io/transcribe/) that helps you transcribe audio files. [Run it on your own machine](#development-and-running-locally-%F0%9F%9B%A0%EF%B8%8F) if you like.
+A simple, no-nonsense [online tool](https://espy.github.io/transcribe/) that helps you transcribe audio files. [Run it on your own machine](#development-and-running-locally-%F0%9F%9B%A0%EF%B8%8F) if you like. [Here’s a nice audio file from NASA](https://archive.org/download/Apollo13Audio/EECOM-Loop-During-Accident.ogg) to test it with (download it first, then drag onto the tool).
 
 ![A screenshot of the transcribe interface](transcribe-screenshot.png)
 
