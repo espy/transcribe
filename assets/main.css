@@ -17,7 +17,18 @@ h1 svg {
   width: 1em;
   vertical-align: bottom;
 }
-
+a {
+  border-bottom: 2px dotted currentColor;
+  text-decoration: none;
+  padding-bottom: 0.05em;
+  color: #4e9dca;
+}
+a:focus,
+a:hover {
+  color: #496371;
+  outline: none;
+  border-bottom-style: solid;
+}
 #wavform-size-toggle {
   text-align: right;
   font-size: 0.75rem;
