@@ -18,6 +18,19 @@ h1 svg {
   vertical-align: bottom;
 }
 
+#wavform-size-toggle {
+  text-align: right;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  float: right;
+  padding-top: 1rem;
+  cursor: pointer;
+}
+#wavform-size-toggle.is-small .make-small {display: none}
+#wavform-size-toggle.is-small .make-large {display: inline}
+#wavform-size-toggle.is-large .make-small {display: inline}
+#wavform-size-toggle.is-large .make-large {display: none}
+
 #holder {
   display: flex;
   position: fixed;
@@ -129,6 +142,9 @@ wave > wave:after {
 #waveform-display > wave{
   transform: scaleY(0);
   transition: all 1s ease-in-out;
+}
+#waveform-display.small > wave{
+  height: 18px !important;
 }
 .waveform-ready #waveform-display > wave{
   transform: scaleY(1);

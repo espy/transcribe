@@ -158,6 +158,16 @@ onRangeChange(document.getElementById('playback-rate'), function (event) {
   wavesurfer.setPlaybackRate(parseFloat(document.getElementById('playback-rate').value, 10))
 })
 
+document.getElementById('wavform-size-toggle').addEventListener('click', function () {
+  if (this.classList.value === 'is-small') {
+    this.classList = 'is-large'
+    document.getElementById('waveform-display').classList = ''
+  } else {
+    this.classList = 'is-small'
+    document.getElementById('waveform-display').classList = 'small'
+  }
+})
+
 // TODO: this should happen in response to a wavesurfer event
 var togglePlayPause = function () {
   if (wavesurfer.isPlaying()) {
