@@ -8,6 +8,9 @@ body {
   height: 100vh;
   flex-direction: column;
 }
+.svg-library {
+  display: none;
+}
 h1 svg {
   height: 1em;
   display: inline-block;
@@ -16,23 +19,43 @@ h1 svg {
 }
 
 #holder {
-  display: block;
+  display: flex;
   position: fixed;
-  background: #ffc6bf;
+  background: #fafaf8;
   border: 5px solid currentColor;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  text-align: center;
-  line-height: 100vh;
-  color: #de341f;
+  color: #4e9dca;
   font-weight: bold;
   z-index: 1;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s;
+}
+#holder h1 svg {
+  margin-left: -46px;
+  padding-right: 10px;
+}
+.holder-message {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  max-width: 90vw;
 }
 #holder.hover {
-  color: #4e9dca;
-  background-color: #6bbeed;
+  color: #fff;
+  background-color: #9ac34a;
+}
+#holder .holder-message.hover {
+  display: none;
+}
+#holder.hover .holder-message.hover {
+  display: flex;
+}
+#holder.hover .holder-message.default {
+  display: none;
 }
 .file-loaded #holder {
   display: none;
@@ -43,6 +66,10 @@ h1 svg {
   background: #fafaf8;
   padding: 10px;
   align-self: flex-start;
+  box-sizing: border-box;
+}
+#audio-area h1 {
+  margin-top: 0;
 }
 #remove-loop{
   display: none;
@@ -51,15 +78,16 @@ h1 svg {
   display: inline;
 }
 wave > wave {
-  border-color: #de341f !important;
+  border-color: #9ac34a !important;
   position: relative;
 }
+/*
 wave > wave:before,
 wave > wave:after {
   content: "";
   width: 2px;
   height: 3px;
-  background: #de341f;
+  background: #9ac34a;
   display: block;
   position: absolute;
   right: 0;
@@ -70,11 +98,11 @@ wave > wave:before{
 wave > wave:after {
   bottom: 0;
 }
+*/
 .wavesurfer-region{
-  background-color: rgba(222, 52, 31, 0.1) !important;
-  border-radius: 1px;
-  border: 1px solid #de341f;
+  background-color: #cddc3938 !important;
   box-sizing: border-box;
+  z-index: 1000 !important;
 }
 .wavesurfer-handle{
   margin-left: -1px !important;
@@ -86,20 +114,14 @@ wave > wave:after {
 .wavesurfer-handle:before{
   content: "";
   display: block;
-  width: 7px;
-  height: 7px;
-  background-color: #f5e1d7;
+  width: 11px;
+  height: 11px;
+  background-color: #9ac34a;
   position: absolute;
-  top: calc(50% - 4px);
-  transform: rotateZ(45deg);
-  left: -4px;
-  border: 1px solid #de341f;
-}
-.wavesurfer-handle-end:before{
-  left: -3px;
-}
-#waveform-timeline {
-  margin: 1em 0 0;
+  top: calc(50% - 8px);
+  left: -7px;
+  border: 3px solid #fff;
+  border-radius: 100%;
 }
 #waveform-display{
   position: relative;
@@ -157,6 +179,7 @@ button {
   font-weight: bold;
   text-transform: uppercase;
   color: #4a9ccc;
+  cursor: pointer;
 }
 button:hover,
 button:focus {

@@ -13,17 +13,33 @@
   <link rel="stylesheet" href="assets/main.css">
 </head>
 <body>
-  <div id="holder">Drop an audio file here…</div>
+  <svg class="svg-library">
+    <symbol id="logo" viewBox="0 0 300 300">
+      <path d="M30 210V90m0 0c0-33.1 26.9-60 60-60m60 60c0-33.1-26.9-60-60-60m60 180V90m0 120c0 33.1 26.9 60 60 60s60-26.9 60-60m0 0V90" fill="none" stroke="#4e9dca" stroke-width="31" stroke-linecap="round" stroke-miterlimit="10"/>
+    </symbol>
+  </svg>
+  <div id="holder">
+    <div class="holder-message default">
+      <h1><svg><use xlink:href="#logo" /></svg>Hi.</h1>
+      <p>
+        Drop an audio file here to begin transcribing it.
+      </p>
+    </div>
+    <div class="holder-message hover">
+        <h1>Yes.</h1>
+        <p>
+          Very nice. Please let go.
+        </p>
+      </div>
+  </div>
   <section id="audio-area">
     <h1>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-        <path d="M30 210V90m0 0c0-33.1 26.9-60 60-60m60 60c0-33.1-26.9-60-60-60m60 180V90m0 120c0 33.1 26.9 60 60 60s60-26.9 60-60m0 0V90" fill="none" stroke="#4e9dca" stroke-width="31" stroke-linecap="round" stroke-miterlimit="10"/>
-      </svg>
+      <svg><use xlink:href="#logo" /></svg>
       <span id="filename"></span> — <span id="time">00:00:00</span>
     </h1>
     <div id="waveform-display">
       <div id="loading-message">
-        Generating your waveform…
+        Generating the waveform
       </div>
     </div>
     <div id="waveform-timeline"></div>
@@ -36,10 +52,12 @@
   <section id="text-area">
     <textarea name="transcript" id="transcript" cols="30" rows="10">
 Welcome to transcribe.
-Press the escape key to play and pause.
-Click and drag on the waveform to keep repeating a section.
-Type your transcription in this area.
-Your transcription of each file is always saved on this device.
+
+This is how it works:
+- Press the escape key to play and pause.
+- Click and drag on the waveform to create a loop.
+- Type your transcription in this area.
+- Your transcription of each file is always saved on this device.
 
 Happy transcribing!
     </textarea>

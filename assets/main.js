@@ -80,6 +80,8 @@ var wavesurfer = WaveSurfer.create({
   container: '#waveform-display',
   waveColor: '#4e9dca',
   progressColor: '#6bbeed',
+  cursorColor: '#4e9dca',
+  cursorWidth: 3,
   backend: 'MediaElement', // crucial, as mediaElement can change playbackRate with constant pitch
   barWidth: 3,
   normalize: true,
