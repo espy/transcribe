@@ -135,9 +135,20 @@ wave > wave:after {
 }
 #loading-message {
   position: absolute;
-  top: calc(50% - 0.5em);
+  top: calc(50% - 1em);
   text-align: center;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#loading-message svg {
+  height: 1rem;
+  transform: rotate(180deg);
+  width: 1rem;
+}
+#loading-message span {
+  padding: 0 1em;
 }
 .waveform-ready #loading-message{
   display: none;

@@ -204,6 +204,8 @@ document.getElementById('transcript').addEventListener('keyup', function(){
   localStorage.setItem(fileName, this.value)
 }, false);
 
+/*
 window.onbeforeunload = function () {
   return 'Please make sure you’ve saved your work before leaving this page'
 }
+*/
