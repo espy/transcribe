@@ -3,12 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Transcribe</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="assets/main.css">
 </head>
 <body>
   <div id="holder">Drop an audio file here…</div>
   <section id="audio-area">
-    <h1><span id="title">Transcribe</span><span id="time"></span></h1>
+    <h1>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <path d="M30 210V90m0 0c0-33.1 26.9-60 60-60m60 60c0-33.1-26.9-60-60-60m60 180V90m0 120c0 33.1 26.9 60 60 60s60-26.9 60-60m0 0V90" fill="none" stroke="#4e9dca" stroke-width="31" stroke-linecap="round" stroke-miterlimit="10"/>
+      </svg>
+      <span id="filename"></span>
+    </h1>
     <div id="waveform-display">
       <div id="loading-message">
         Generating your waveform…

@@ -55,7 +55,7 @@ holder.ondrop = function (e) {
 
   var file = e.dataTransfer.files[0]
   fileName = file.name
-  document.getElementById('title').innerHTML = 'Transcribing ' + file.name
+  document.getElementById('filename').innerHTML = file.name
   // var reader = new FileReader()
   // `loadBlob` doesn’t work with `backend: MediaElement`
   // wavesurfer.loadBlob(file)

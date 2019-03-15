@@ -8,6 +8,13 @@ body {
   height: 100vh;
   flex-direction: column;
 }
+h1 svg {
+  height: 1em;
+  display: inline-block;
+  width: 1em;
+  vertical-align: bottom;
+}
+
 #holder {
   display: block;
   position: fixed;
