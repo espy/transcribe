@@ -48,11 +48,13 @@ holder.ondragend = function (e) {
   e.preventDefault()
   return false
 }
+let fileName
 holder.ondrop = function (e) {
   this.className = ''
   e.preventDefault()
 
   var file = e.dataTransfer.files[0]
+  fileName = file.name
   document.getElementById('title').innerHTML = 'Transcribing ' + file.name
   // var reader = new FileReader()
   // `loadBlob` doesn’t work with `backend: MediaElement`
@@ -62,6 +64,10 @@ holder.ondrop = function (e) {
   audio.src = URL.createObjectURL(file)
   wavesurfer.load(audio)
   document.getElementsByTagName('body')[0].classList.add('file-loaded')
+  const storedTextForThisFile = localStorage.getItem(file.name)
+  if (storedTextForThisFile) {
+    document.getElementById('transcript').value = storedTextForThisFile
+  }
   return false
 }
 
@@ -76,6 +82,7 @@ var wavesurfer = WaveSurfer.create({
   progressColor: '#6bbeed',
   backend: 'MediaElement', // crucial, as mediaElement can change playbackRate with constant pitch
   barWidth: 3,
+  normalize: true,
   plugins: [
     WaveSurfer.timeline.create({
       container: '#waveform-timeline',
@@ -209,8 +216,9 @@ window.addEventListener('resize', _.debounce(function () {
   wavesurfer.drawBuffer()
 }, 500))
 
-// wavesurfer.load('inter.m4a')
-// document.getElementsByTagName('body')[0].classList.add('file-loaded')
+document.getElementById('transcript').addEventListener('keyup', function(){
+  localStorage.setItem(fileName, this.value)
+}, false);
 
 window.onbeforeunload = function () {
   return 'Please make sure you’ve saved your work before leaving this page'
