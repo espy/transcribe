@@ -4,11 +4,6 @@ A simple, no-nonsense [online tool](https://espy.github.io/transcribe/) that hel
 
 ![A screenshot of the transcribe interface](transcribe-screenshot.png)
 
-- [Transcribe ✍️](#transcribe-%E2%9C%8D%EF%B8%8F)
-  - [Yes ✅](#yes-%E2%9C%85)
-  - [No 💥](#no-%F0%9F%92%A5)
-  - [Development and running locally 🛠️](#development-and-running-locally-%F0%9F%9B%A0%EF%B8%8F)
-
 ## Yes ✅
 
 - Multiple formats (wav, mp3, m4a, flac, possible more).
