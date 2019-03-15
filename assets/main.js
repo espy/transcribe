@@ -95,9 +95,7 @@ var wavesurfer = WaveSurfer.create({
       secondaryColor: '#6bbeed'
     }),
     WaveSurfer.regions.create({
-      dragSelection: {
-          slop: 5
-      }
+      dragSelection: true
     })
   ]
 })
@@ -105,6 +103,12 @@ var wavesurfer = WaveSurfer.create({
 wavesurfer.on('finish', function (event) {
   document.getElementById('play-pause').innerHTML = 'Play'
   wavesurfer.seekTo(0)
+})
+
+wavesurfer.on('region-created', function (region) {
+  region.update({
+    loop: true
+  })
 })
 
 // Pressing play after pause skips back n seconds, so you have some overlap.
