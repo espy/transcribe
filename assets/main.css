@@ -42,7 +42,7 @@ h1 svg {
   display: flex;
   flex-direction: column;
   width: auto;
-  max-width: 90vw;
+  max-width: 50vw;
 }
 #holder.hover {
   color: #fff;
