@@ -1,6 +1,6 @@
 # Transcribe ✍️
 
-A simple, no-nonsense online tool that helps you transcribe audio files.
+A simple, no-nonsense [online tool](https://espy.github.io/transcribe/) that helps you transcribe audio files. [Run it on your own machine](#development-and-running-locally-%F0%9F%9B%A0%EF%B8%8F) if you like.
 
 ![A screenshot of the transcribe interface](transcribe-screenshot.png)
 
