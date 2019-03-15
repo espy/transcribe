@@ -85,6 +85,8 @@ var wavesurfer = WaveSurfer.create({
   backend: 'MediaElement', // crucial, as mediaElement can change playbackRate with constant pitch
   barWidth: 3,
   normalize: true,
+  quickCenter: true,
+  hideScrollbar: true,
   plugins: [
     WaveSurfer.timeline.create({
       container: '#waveform-timeline',
@@ -160,6 +162,10 @@ document.getElementById('remove-loop').addEventListener('click', function () {
 
 onRangeChange(document.getElementById('playback-rate'), function (event) {
   wavesurfer.setPlaybackRate(parseFloat(document.getElementById('playback-rate').value, 10))
+})
+
+onRangeChange(document.getElementById('zoom'), function (event) {
+  wavesurfer.zoom(Number(event.target.value));
 })
 
 document.getElementById('wavform-size-toggle').addEventListener('click', function () {
