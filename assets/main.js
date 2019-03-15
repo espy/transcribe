@@ -74,8 +74,25 @@ var wavesurfer = WaveSurfer.create({
   container: '#waveform-display',
   waveColor: '#4e9dca',
   progressColor: '#6bbeed',
-  backend: 'MediaElement' // crucial, as mediaElement can change playbackRate with constant pitch
+  backend: 'MediaElement', // crucial, as mediaElement can change playbackRate with constant pitch
+  barWidth: 3,
+  plugins: [
+    WaveSurfer.timeline.create({
+      container: '#waveform-timeline',
+      notchPercentHeight: 5,
+      primaryFontColor: '#4e9dca',
+      secondaryFontColor: '#6bbeed',
+      primaryColor: '#4e9dca',
+      secondaryColor: '#6bbeed'
+    }),
+    WaveSurfer.regions.create({
+      dragSelection: {
+          slop: 5
+      }
+    })
+  ]
 })
+/*
 wavesurfer.on('ready', function () {
   var timeline = Object.create(WaveSurfer.Timeline)
 
@@ -93,6 +110,7 @@ wavesurfer.on('ready', function () {
     loop: 'true'
   })
 })
+*/
 
 wavesurfer.on('finish', function (event) {
   document.getElementById('play-pause').innerHTML = 'Play'
