@@ -125,7 +125,7 @@ var updateTime = function (time) {
   var hours = leftPad(Math.floor(time / 3600))
   var minutes = leftPad(Math.floor(time / 60))
   var seconds = leftPad(Math.floor(time % 60))
-  document.getElementById('time').innerHTML = ' - ' + hours + ':' + minutes + ':' + seconds
+  document.getElementById('time').innerHTML = hours + ':' + minutes + ':' + seconds
 }
 
 var leftPad = function (value) {
