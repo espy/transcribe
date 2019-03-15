@@ -45,8 +45,16 @@
     <div id="waveform-timeline"></div>
     <div id="controls">
       <button id="play-pause">Play</button>
-      <input id="playback-rate" type="range" min="0.5" max="2" step="0.1" value="1"/>
       <button id="remove-loop">Remove loop</button>
+      <section class="speed-control">
+        <label>Playback speed</label>
+        <input id="playback-rate" type="range" min="0.5" max="2" step="0.1" value="1"/>
+        <div class="speed-indicators">
+          <label>0.5&times;</label>
+          <label>1&times;</label>
+          <label>2&times;</label>
+        </div>
+      </section>
     </div>
   </section>
   <section id="text-area">

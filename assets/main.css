@@ -143,7 +143,30 @@ wave > wave:after {
   display: none;
 }
 #controls {
-  margin: 1em 0;
+  margin: 1em 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.speed-control {
+  width: 10em;
+}
+label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.speed-indicators {
+  width: 100%;
+  display: flex;
+  margin-top: 0.25em;
+
+}
+.speed-indicators label:nth-child(1) {
+  width: 33%;
+}
+.speed-indicators label:nth-child(2) {
+  width: 65%;
 }
 #text-area {
   background: #fafaf8;
@@ -175,7 +198,7 @@ textarea:focus{
 button {
   border: 2px solid currentColor;
   border-radius: 4px;
-  padding: 0.25em 0.75em;
+  padding: 0.5em 0.75em;
   font-weight: bold;
   text-transform: uppercase;
   color: #4a9ccc;
@@ -192,6 +215,7 @@ button:focus {
 input[type=range] {
   -webkit-appearance: none;
   margin: 4px 0;
+  width: 100%;
 }
 input[type=range]:focus {
   outline: none;
