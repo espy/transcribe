@@ -2,6 +2,11 @@ body {
       font-family: Helvetica, sans-serif;
       font-size: 18px;
       color: #4e9dca;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
     }
     #holder {
       display: block;
@@ -26,13 +31,11 @@ body {
       display: none;
     }
     #audio-area {
-      position: fixed;
-      left: 0;
-      top: 0;
-      right: 0;
-      height: 42vh;
+      width: 100%;
+      margin: 0;
       background: #f7f5ec;
       padding: 10px;
+      align-self: flex-start;
     }
     #remove-loop{
       display: none;
@@ -114,13 +117,9 @@ body {
       margin: 1em 0;
     }
     #text-area {
-      position: fixed;
-      top: 42vh;
-      left: 0;
-      right: 0;
-      bottom: 0;
       background: #f7f5ec;
       padding: 10px;
+      flex-grow: 2;
     }
     textarea {
       width: 100%;
