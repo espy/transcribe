@@ -99,25 +99,6 @@ var wavesurfer = WaveSurfer.create({
     })
   ]
 })
-/*
-wavesurfer.on('ready', function () {
-  var timeline = Object.create(WaveSurfer.Timeline)
-
-  timeline.init({
-    wavesurfer: wavesurfer,
-    container: '#waveform-timeline',
-    notchPercentHeight: 5,
-    primaryFontColor: '#4e9dca',
-    secondaryFontColor: '#6bbeed',
-    primaryColor: '#4e9dca',
-    secondaryColor: '#6bbeed'
-  })
-
-  wavesurfer.enableDragSelection({
-    loop: 'true'
-  })
-})
-*/
 
 wavesurfer.on('finish', function (event) {
   document.getElementById('play-pause').innerHTML = 'Play'
@@ -203,7 +184,8 @@ wavesurfer.on('region-created', function (region) {
       previousRegion.remove()
     }
     previousRegion = region
-    wavesurfer.play(region.start)
+    const regionStartRatio = region.start / wavesurfer.getDuration()
+    wavesurfer.seekTo(regionStartRatio)
     document.getElementsByTagName('body')[0].classList.add('is-looping')
   })
 })
