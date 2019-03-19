@@ -7,8 +7,8 @@ A simple, no-nonsense [online tool](https://espy.github.io/transcribe/) that hel
 ## Yes ✅
 
 - Multiple formats (wav, mp3, m4a, flac, possible more).
-- Play/pause with <key>esc</key> so you never have to take your hands off the keyboard to control the audio playback.
-- Loop tricky regions.
+- Play/pause with <key>esc</key> so you never have to take your hands off the keyboard to control the audio playback. Also, resuming after pause skips back a few seconds, so you can re-listen to short sequences easily without having to set up a loop.
+- Proper loop function tricky regions.
 - Slow down the audio if it’s difficult to understand.
 - Speed up the audio if the speakers are too slow.
 - Transcriptions for each file are stored in-browser, on that one device. If you come back and drag in the same file again, your transcription will appear again.
@@ -23,6 +23,13 @@ A simple, no-nonsense [online tool](https://espy.github.io/transcribe/) that hel
 - No backend. I don’t get your audio or your transcriptions.
 - No business model.
 - No guarantees. Save your work.
+
+## Known Issues
+
+- Long audio files could be handled better:
+  - The timeline is too cramped. [It’s possible to override the timeline renderer](https://wavesurfer-js.org/example/timeline-notches/index.html), but I haven’t had time for this yet.
+  - The loop function becomes less useful because it’s not possible to make short loops without zooming in. That said, there’s an experimental branch with zooming, but the performance is pretty bad with longer files (which is where it would be most useful), with CPU and memory use rising to problematic levels.
+- Sometimes, dropping a file on the drop area won’t be registered correctly, and the browser will open that file instead.
 
 ## Development and running locally 🛠️
 
