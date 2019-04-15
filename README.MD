@@ -6,9 +6,9 @@ A simple, no-nonsense [online tool](https://espy.github.io/transcribe/) that hel
 
 ## Yes ✅
 
-- Multiple formats (wav, mp3, m4a, flac, possible more).
+- Multiple formats (wav, mp3, m4a, flac, possibly more).
 - Play/pause with <key>esc</key> so you never have to take your hands off the keyboard to control the audio playback. Also, resuming after pause skips back a few seconds, so you can re-listen to short sequences easily without having to set up a loop.
-- Proper loop function tricky regions.
+- Proper loop function for tricky regions.
 - Slow down the audio if it’s difficult to understand.
 - Speed up the audio if the speakers are too slow.
 - Transcriptions for each file are stored in-browser, on that one device. If you come back and drag in the same file again, your transcription will appear again.
